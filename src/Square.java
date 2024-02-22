@@ -7,7 +7,7 @@ import java.lang.Math;
 
 public class Square extends Polygon{
   //Calculate and return perimeter of rectangle
-  public double getPerim(){
+  public double getPerimeter(){
         return 4 * getSide1();
     }
   

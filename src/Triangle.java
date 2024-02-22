@@ -15,8 +15,7 @@ public class Triangle extends Polygon{
   //Calculate and return area of triangle using Heron's Formula
     public double getArea() {
         double semiPeri = (getSide1()+getSide2()+getSide3())/2;
-        double area = Math.pow(semiPeri * (semiPeri-getSide1()) * (semiPeri-getSide2()) * (semiPeri-getSide3()),0.5);
-        return area;
+        return  Math.pow(semiPeri * (semiPeri-getSide1()) * (semiPeri-getSide2()) * (semiPeri-getSide3()),0.5);
       
     }
 }      

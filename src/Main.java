@@ -11,7 +11,7 @@ public class Main
         System.out.println("Welcome to Polygon Math");
         Scanner input1 = new Scanner(System.in);
 
-        System.out.print("What shape? (T)riangle, (S)quare, (R)ectangle, (C)ircle, (H)exagon >");
+        System.out.print("What selectedShape? (T)riangle, (S)quare, (R)ectangle, (C)ircle, (H)exagon >");
         String selectedShape = input1.nextLine().toLowerCase().substring(0, 1);
         switch (selectedShape)
         {
@@ -39,6 +39,7 @@ public class Main
                 System.out.format("Unrecognized selectedShape: %s%n", selectedShape);
         }
 
+        System.out.println("End Polygon Math");
     }
 
     private static void TestHexagon()
@@ -49,13 +50,13 @@ public class Main
         Scanner input1 = new Scanner(System.in);
 
         System.out.print("Input the length of the side in cm: >");
-        double lth = input1.nextDouble();
+        double lth = Double.parseDouble(input1.nextLine());
 
         Hexagon hex = new Hexagon(lth);
         polygon = hex;
 
-        System.out.format("The Perimeter of a hexagon of length %.1f cm is %.1f cm %n", hex.getSideLength(), hex.getPerimeter());
-        System.out.format("The Area of a hexagon of length %.1f cm is %.1f cm %n", hex.getSideLength(), hex.getArea());
+        System.out.format("The Perimeter of a hexagon of length %.1f cm is %.1f cm %n", hex.getSideLength(), polygon.getPerimeter());
+        System.out.format("The Area of a hexagon of length %.1f cm is %.1f cm %n", hex.getSideLength(), polygon.getArea());
 
     }
 
@@ -67,13 +68,15 @@ public class Main
         Scanner input1 = new Scanner(System.in);
 
         System.out.print("Input the diameter of the circle in cm: >");
-        double diameter = input1.nextDouble();
+        double diameter = Double.parseDouble(input1.nextLine());
+
+        input1.close();
 
         Circle circ = new Circle(diameter);
         polygon = circ;
 
-        System.out.format("The Perimeter of a circle of diameter %.1f cm is %.1f cm %n", circ.getDiameter(), circ.getPerimeter());
-        System.out.format("The Area of a circle of diameter %.1f cm is %.1f cm %n", circ.getDiameter(), circ.getArea());
+        System.out.format("The Perimeter of a circle of diameter %.1f cm is %.1f cm %n", circ.getDiameter(), polygon.getPerimeter());
+        System.out.format("The Area of a circle of diameter %.1f cm is %.1f cm %n", circ.getDiameter(), polygon.getArea());
 
     }
 
@@ -93,14 +96,16 @@ public class Main
         System.out.print("Input the length of the square's sides in cm: >");
         double sideSqrLength = input1.nextDouble();
 
+        input1.close();
+
         // Set data in Square's object
         polygon.setValues(sideSqrLength, sideSqrLength, sideSqrLength);
 
         //Display the perimeter of square
-        System.out.println("Perimeter of square: " + sqr.getPerim() + " cm");
+        System.out.println("Perimeter of square: " + polygon.getPerimeter() + " cm");
 
         //Display the area of square
-        System.out.println("Area of square: " + sqr.getArea() + " cm");
+        System.out.println("Area of square: " + polygon.getArea() + " cm");
     }
 
     private static void TestTriangle()
@@ -117,20 +122,20 @@ public class Main
         polygon = tri;
 
         System.out.print("Input the length of the triangle's first side in cm: >");
-        double side1TriLength = input1.nextDouble();
+        double side1TriLength = Double.parseDouble(input1.nextLine());
         System.out.print("Input the length of the triangle's second side in cm: >");
-        double side2TriLength = input1.nextDouble();
+        double side2TriLength = Double.parseDouble(input1.nextLine());
         System.out.print("Input the length of the triangle's third side in cm: >");
-        double side3TriLength = input1.nextDouble();
+        double side3TriLength = Double.parseDouble(input1.nextLine());
 
         // Set data in Triangle's object
         polygon.setValues(side1TriLength, side2TriLength, side3TriLength);
 
         //Display the perimeter of triangle
-        System.out.format("Perimeter of triangle: %.1f cm%n", tri.getPerimeter());
+        System.out.format("Perimeter of triangle: %.1f cm%n", polygon.getPerimeter());
 
         //Display the area of triangle
-        System.out.format("Area of triangle : %.1f%n", tri.getArea());
+        System.out.format("Area of triangle : %.1f%n", polygon.getArea());
     }
 
     private static void TestRectangle()
@@ -146,10 +151,12 @@ public class Main
         System.out.print("What is the height (cm) of the rectangle?>");
         double height = Double.parseDouble(input1.nextLine());
 
+        input1.close();
+
         Rectangle rect = new Rectangle(width, height);
         polygon = rect;
 
-        System.out.format("The Perimeter of a rectangle (%.1f cm W x %.1f cm H) is %.1f cm %n", rect.getWidth(), rect.getHeight(), rect.getPerimeter());
-        System.out.format("The Area of a rectangle (%.1f cm W x %.1f cm H) is %.1f cm %n", rect.getWidth(), rect.getHeight(), rect.getArea());
+        System.out.format("The Perimeter of a rectangle (%.1f cm W x %.1f cm H) is %.1f cm %n", rect.getWidth(),rect.getHeight(), polygon.getPerimeter());
+        System.out.format("The Area of a rectangle (%.1f cm W x %.1f cm H) is %.1f cm %n", rect.getWidth(), rect.getHeight(), polygon.getArea());
     }
 }
