@@ -12,12 +12,12 @@ public class Hexagon extends Polygon
 
     public double getPerimeter()
     {
-        return 6 * getSide1();
+        return 6 * getSideLength();
     }
 
     public double getArea()
     {
-        return (3 * Math.sqrt(3) * Math.pow(getSide1(), 2) )
+        return (3 * Math.sqrt(3) * Math.pow(getSideLength(), 2) )
                 / 2.0;
     }
 }
