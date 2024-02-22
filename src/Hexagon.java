@@ -17,7 +17,7 @@ public class Hexagon extends Polygon
 
     public double getArea()
     {
-        return (3 * Math.sqrt(3) * Math.pow(getSideLength(), 2) )
+        return (3 * Math.sqrt(3) * Math.pow(getSideLength(), 2))
                 / 2.0;
     }
 }

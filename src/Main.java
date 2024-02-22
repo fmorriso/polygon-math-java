@@ -130,7 +130,7 @@ public class Main
         System.out.format("Perimeter of triangle: %.1f cm%n", tri.getPerim());
 
         //Display the area of triangle
-        System.out.println("Area of triangle : " + Math.round(tri.getArea()) + " cm");
+        System.out.format("Area of triangle : %.1f%n", tri.getArea());
     }
 
     private static void TestRectangle()
@@ -149,7 +149,7 @@ public class Main
         Rectangle rect = new Rectangle(width, height);
         polygon = rect;
 
-        System.out.format("The Perimeter of a rectangle (%.1f cm W x %.1f cm H) is %.1f cm %n", rect.getWidth(), rect.getHeight(), rect.getPerim());
+        System.out.format("The Perimeter of a rectangle (%.1f cm W x %.1f cm H) is %.1f cm %n", rect.getWidth(), rect.getHeight(), rect.getPerimeter());
         System.out.format("The Area of a rectangle (%.1f cm W x %.1f cm H) is %.1f cm %n", rect.getWidth(), rect.getHeight(), rect.getArea());
     }
 }

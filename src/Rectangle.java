@@ -15,7 +15,7 @@ public class Rectangle extends Polygon
         return getSide2();
     }
 
-    public double getPerim()
+    public double getPerimeter()
     {
         return 2 * ( getWidth() + getHeight() );
     }
