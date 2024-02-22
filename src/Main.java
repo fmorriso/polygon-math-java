@@ -127,7 +127,7 @@ public class Main
         polygon.setValues(side1TriLength, side2TriLength, side3TriLength);
 
         //Display the perimeter of triangle
-        System.out.format("Perimeter of triangle: %.1f cm%n", tri.getPerim());
+        System.out.format("Perimeter of triangle: %.1f cm%n", tri.getPerimeter());
 
         //Display the area of triangle
         System.out.format("Area of triangle : %.1f%n", tri.getArea());

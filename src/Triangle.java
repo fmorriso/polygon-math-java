@@ -7,9 +7,9 @@ import java.lang.Math;
 
 public class Triangle extends Polygon{ 
     //Calculate and return perimeter of triangle
-    public double getPerim() 
+    public double getPerimeter()
     {
-        return (getSide1() + getSide2() + getSide3());
+        return getSide1() + getSide2() + getSide3();
     }
  
   //Calculate and return area of triangle using Heron's Formula
