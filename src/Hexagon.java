@@ -5,6 +5,11 @@ public class Hexagon extends Polygon
         setValues(sideLength, 0, 0);
     }
 
+    public double getSideLength()
+    {
+        return this.getSide1();
+    }
+
     public double getPerimeter()
     {
         return 6 * getSide1();

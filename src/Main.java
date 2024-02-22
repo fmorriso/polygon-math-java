@@ -54,8 +54,8 @@ public class Main
         Hexagon hex = new Hexagon(lth);
         polygon = hex;
 
-        System.out.format("The Perimeter of a hexagon of length %.1f cm is %.1f cm %n", polygon.getSide1(), hex.getPerimeter());
-        System.out.format("The Area of a hexagon of length %.1f cm is %.1f cm %n", polygon.getSide1(), hex.getArea());
+        System.out.format("The Perimeter of a hexagon of length %.1f cm is %.1f cm %n", hex.getSideLength(), hex.getPerimeter());
+        System.out.format("The Area of a hexagon of length %.1f cm is %.1f cm %n", hex.getSideLength(), hex.getArea());
 
     }
 
@@ -66,14 +66,14 @@ public class Main
         Polygon polygon = null;
         Scanner input1 = new Scanner(System.in);
 
-        System.out.print("Input the diameter of the circle in cm: ");
+        System.out.print("Input the diameter of the circle in cm: >");
         double diameter = input1.nextDouble();
 
         Circle circ = new Circle(diameter);
         polygon = circ;
 
-        System.out.format("The Perimeter of a circle of diameter %.1f cm is %.1f cm %n", polygon.getSide1(), circ.getPerimeter());
-        System.out.format("The Area of a circle of diameter %.1f cm is %.1f cm %n", polygon.getSide1(), circ.getArea());
+        System.out.format("The Perimeter of a circle of diameter %.1f cm is %.1f cm %n", circ.getDiameter(), circ.getPerimeter());
+        System.out.format("The Area of a circle of diameter %.1f cm is %.1f cm %n", circ.getDiameter(), circ.getArea());
 
     }
 
