@@ -11,7 +11,7 @@ public class Main
         System.out.println("Welcome to Polygon Math");
         Scanner input1 = new Scanner(System.in);
 
-        System.out.print("What selectedShape? (T)riangle, (S)quare, (R)ectangle, (C)ircle, (H)exagon >");
+        System.out.print("What shape? (T)riangle, (S)quare, (R)ectangle, (C)ircle, (H)exagon >");
         String selectedShape = input1.nextLine().toLowerCase().substring(0, 1);
         switch (selectedShape)
         {
