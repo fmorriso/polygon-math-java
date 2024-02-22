@@ -9,10 +9,26 @@ public class Main
     public static void main(String[] args)
     {
         System.out.println("Welcome to Polygon Math");
+
+        do
+        {
+            ask_what_shape_to_test();
+        } while(continue_testing());
+
+        System.out.println("End Polygon Math");
+    }
+
+    private static void ask_what_shape_to_test()
+    {
         Scanner input1 = new Scanner(System.in);
 
         System.out.print("What selectedShape? (T)riangle, (S)quare, (R)ectangle, (C)ircle, (H)exagon >");
-        String selectedShape = input1.nextLine().toLowerCase().substring(0, 1);
+        String selectedShape = input1.nextLine().toLowerCase();
+
+        // prevent run-time exception
+        if (selectedShape == null || selectedShape.isEmpty()) selectedShape = "unknown";
+        // only care about the first character because it will uniquely identify which shape to test
+        selectedShape = selectedShape.substring(0, 1);
         switch (selectedShape)
         {
             case "c":
@@ -38,8 +54,17 @@ public class Main
             default:
                 System.out.format("Unrecognized selectedShape: %s%n", selectedShape);
         }
+    }
 
-        System.out.println("End Polygon Math");
+    private static boolean continue_testing()
+    {
+        Scanner kb = new Scanner(System.in);
+        System.out.print("Do you want to test another shape?>");
+        String resp = kb.nextLine();
+        // treat empty string/Enter key same as yes
+        if (resp == null || resp.length() == 0 || resp.toLowerCase().substring(0, 1).equals("y")) return true;
+        return false;
+
     }
 
     private static void TestHexagon()
@@ -70,8 +95,6 @@ public class Main
         System.out.print("Input the diameter of the circle in cm: >");
         double diameter = Double.parseDouble(input1.nextLine());
 
-        input1.close();
-
         Circle circ = new Circle(diameter);
         polygon = circ;
 
@@ -96,16 +119,16 @@ public class Main
         System.out.print("Input the length of the square's sides in cm: >");
         double sideSqrLength = input1.nextDouble();
 
-        input1.close();
-
         // Set data in Square's object
         polygon.setValues(sideSqrLength, sideSqrLength, sideSqrLength);
 
         //Display the perimeter of square
-        System.out.println("Perimeter of square: " + polygon.getPerimeter() + " cm");
+        //System.out.println("Perimeter of square: " + polygon.getPerimeter() + " cm");
+        System.out.format("Perimeter of square of side length %.1f cm is %.1f cm%n", polygon.getSide1(), polygon.getPerimeter());
 
         //Display the area of square
-        System.out.println("Area of square: " + polygon.getArea() + " cm");
+        //System.out.println("Area of square: " + polygon.getArea() + " cm");
+        System.out.format("Area of square of side length %.1f cm is %.1f cm%n", polygon.getSide1(), polygon.getArea());
     }
 
     private static void TestTriangle()
@@ -150,8 +173,6 @@ public class Main
         double width = Double.parseDouble(input1.nextLine());
         System.out.print("What is the height (cm) of the rectangle?>");
         double height = Double.parseDouble(input1.nextLine());
-
-        input1.close();
 
         Rectangle rect = new Rectangle(width, height);
         polygon = rect;
