@@ -156,7 +156,7 @@ public class Main
         Rectangle rect = new Rectangle(width, height);
         polygon = rect;
 
-        System.out.format("The Perimeter of a rectangle (%.1f cm W x %.1f cm H) is %.1f cm %n", rect.getWidth(),rect.getHeight(), polygon.getPerimeter());
+        System.out.format("The Perimeter of a rectangle (%.1f cm W x %.1f cm H) is %.1f cm %n", rect.getWidth(), rect.getHeight(), polygon.getPerimeter());
         System.out.format("The Area of a rectangle (%.1f cm W x %.1f cm H) is %.1f cm %n", rect.getWidth(), rect.getHeight(), polygon.getArea());
     }
 }
