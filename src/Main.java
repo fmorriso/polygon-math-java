@@ -123,12 +123,12 @@ public class Main
         polygon.setValues(sideSqrLength, sideSqrLength, sideSqrLength);
 
         //Display the perimeter of square
-        //System.out.println("Perimeter of square: " + polygon.getPerimeter() + " cm");
-        System.out.format("Perimeter of square of side length %.1f cm is %.1f cm%n", polygon.getSide1(), polygon.getPerimeter());
+        System.out.println("Perimeter of square: " + polygon.getPerimeter() + " cm");
+        //System.out.format("Perimeter of square of side length %.1f cm is %.1f cm%n", polygon.getSide1(), polygon.getPerimeter());
 
         //Display the area of square
-        //System.out.println("Area of square: " + polygon.getArea() + " cm");
-        System.out.format("Area of square of side length %.1f cm is %.1f cm%n", polygon.getSide1(), polygon.getArea());
+        System.out.println("Area of square: " + polygon.getArea() + " cm");
+        //System.out.format("Area of square of side length %.1f cm is %.1f cm%n", polygon.getSide1(), polygon.getArea());
     }
 
     private static void TestTriangle()
