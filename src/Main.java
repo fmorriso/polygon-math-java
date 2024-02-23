@@ -22,13 +22,14 @@ public class Main
     {
         Scanner input1 = new Scanner(System.in);
 
-        System.out.print("What selectedShape? (T)riangle, (S)quare, (R)ectangle, (C)ircle, (H)exagon >");
-        String selectedShape = input1.nextLine().toLowerCase();
+        System.out.print("What shape? (T)riangle, (S)quare, (R)ectangle, (C)ircle, (H)exagon >");
+        String selectedShape = input1.nextLine();
 
-        // prevent run-time exception
+        // prevent run-time exception when nothing is entered
         if (selectedShape == null || selectedShape.isEmpty()) selectedShape = "unknown";
+
         // only care about the first character because it will uniquely identify which shape to test
-        selectedShape = selectedShape.substring(0, 1);
+        selectedShape = selectedShape.toLowerCase().substring(0, 1);
         switch (selectedShape)
         {
             case "c":

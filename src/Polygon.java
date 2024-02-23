@@ -6,7 +6,7 @@ import java.math.RoundingMode;
  * of any shape
  */
 
-public class Polygon
+public abstract class Polygon
 {
     private double side1;
     private double side2;
