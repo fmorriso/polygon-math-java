@@ -52,7 +52,7 @@ public class Polygon
     }
 
     /**
-     * Returns a double rounded to the specified number of decimal places
+     * Returns a double rounded to the specified number of decimal places without losing accuracy
      *
      * @param x             - the value to round
      * @param decimalPlaces - the number of decimal places desired
