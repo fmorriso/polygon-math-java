@@ -41,14 +41,12 @@ public abstract class Polygon
 
     public double getArea()
     {
-        System.err.println("Error: you did not override getArea in your subclass");
-        return Double.NaN;
+        throw new RuntimeException("Error: you did not override getArea in your subclass");
     }
 
     public double getPerimeter()
     {
-        System.err.println("Error: you did not override getPerimeter in your subclass");
-        return Double.NaN;
+        throw new RuntimeException("You did not override getPerimeter in your subclass");
     }
 
     /**
