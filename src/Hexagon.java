@@ -2,12 +2,12 @@ public class Hexagon extends Polygon
 {
     public Hexagon(double sideLength)
     {
-        setValues(sideLength, 0, 0);
+        setSide(1, sideLength);
     }
 
     public double getSideLength()
     {
-        return this.getSide1();
+        return this.getSide(1);
     }
 
     public double getPerimeter()

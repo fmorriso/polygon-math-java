@@ -111,17 +111,15 @@ public class Main
         Polygon polygon = null;
         Scanner input1 = new Scanner(System.in);
 
-        // assign subclass reference to subclass variable
-        Square sqr = new Square();
+        System.out.print("Input the length of the square's sides in cm: >");
+        double sideSqrLength = input1.nextDouble();
+
+        // create the subclass
+        Square sqr = new Square(sideSqrLength);
 
         // polygon points to the object sqr
         polygon = sqr;
 
-        System.out.print("Input the length of the square's sides in cm: >");
-        double sideSqrLength = input1.nextDouble();
-
-        // Set data in Square's object
-        polygon.setValues(sideSqrLength, sideSqrLength, sideSqrLength);
 
         //Display the perimeter of square
         System.out.println("Perimeter of square: " + polygon.getPerimeter() + " cm");
@@ -139,10 +137,6 @@ public class Main
         Polygon polygon = null;
         Scanner input1 = new Scanner(System.in);
 
-        Triangle tri = new Triangle();
-
-        // polygon points to the object tri
-        polygon = tri;
 
         System.out.print("Input the length of the triangle's first side in cm: >");
         double side1TriLength = Double.parseDouble(input1.nextLine());
@@ -151,8 +145,12 @@ public class Main
         System.out.print("Input the length of the triangle's third side in cm: >");
         double side3TriLength = Double.parseDouble(input1.nextLine());
 
-        // Set data in Triangle's object
-        polygon.setValues(side1TriLength, side2TriLength, side3TriLength);
+        Triangle tri = new Triangle(side1TriLength, side2TriLength, side3TriLength);
+
+        // polygon points to the object tri
+        polygon = tri;
+
+
 
         //Display the perimeter of triangle
         System.out.format("Perimeter of triangle: %.1f cm%n", polygon.getPerimeter());

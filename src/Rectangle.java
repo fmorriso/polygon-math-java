@@ -2,17 +2,18 @@ public class Rectangle extends Polygon
 {
     public Rectangle(double width, double height)
     {
-        this.setValues(width, height, 0);
+        setSide(1, width);
+        setSide(2, height);
     }
 
     public double getWidth()
     {
-        return getSide1();
+        return getSide(1);
     }
 
     public double getHeight()
     {
-        return getSide2();
+        return getSide(2);
     }
 
     public double getPerimeter()

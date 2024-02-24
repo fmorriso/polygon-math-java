@@ -1,5 +1,6 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 
 /**
  * A class Polygon that holds side lengths
@@ -8,35 +9,25 @@ import java.math.RoundingMode;
 
 public abstract class Polygon
 {
-    private double side1;
-    private double side2;
-    private double side3;
+    private ArrayList<Double> sides = new ArrayList<Double>();
 
-    // Set height and width
-    public void setValues(double side1, double side2, double side3)
+    public double getSide(int i)
     {
-        this.side1 = side1;
-        this.side2 = side2;
-        this.side3 = side3;
+        return sides.get(i - 1);
     }
 
-    //Get side1
-    public double getSide1()
+    /**
+     * @param m the side number
+     * @param val the value of the side
+     * @implNote  Since sides are numbered 1, 2, 3, we adjust the index value to correspond to the 0, 1, 2
+     *            numbering of ArrayList
+     */
+    public void setSide(int n, double val)
     {
-        return side1;
-    }
-
-    //Get side2
-    public double getSide2()
-    {
-        return side2;
-    }
-
-    //Get side3
-    public double getSide3()
-    {
-        return side3;
-
+        if (sides.size() < n)
+            sides.add(val);
+        else
+            sides.set(n - 1, val);
     }
 
     public double getArea()
