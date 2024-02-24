@@ -53,7 +53,7 @@ public class Main
                 break;
 
             default:
-                System.out.format("Unrecognized selectedShape: %s%n", selectedShape);
+                System.out.format("Unrecognized shape: %s%n", selectedShape);
         }
     }
 
