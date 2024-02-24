@@ -2,6 +2,7 @@ public class Circle extends Polygon
 {
     public Circle(double diam)
     {
+        // treat "side 1" as the diameter for this shape
         setSide(1, diam);
     }
 
