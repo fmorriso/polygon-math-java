@@ -23,11 +23,13 @@ public class Circle extends Polygon
 
     public double getPerimeter()
     {
-        return  2 * Math.PI * getRadius();
+        double perimeter =  2 * Math.PI * getRadius();
+        return roundDouble(perimeter, DECIMAL_PLACES_OF_ACCURACY);
     }
 
     public double getArea()
     {
-        return Math.pow(getRadius(), 2) * Math.PI;
+        double area = Math.pow(getRadius(), 2) * Math.PI;
+        return roundDouble(area, DECIMAL_PLACES_OF_ACCURACY);
     }
 }

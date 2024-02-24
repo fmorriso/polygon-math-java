@@ -20,13 +20,13 @@ public class Square extends Polygon
     public double getPerimeter()
     {
         double perimeter = 4 * getSideLength();
-        return roundDouble(perimeter, 2);
+        return roundDouble(perimeter, DECIMAL_PLACES_OF_ACCURACY);
     }
 
     //Calculate and return area of Square
     public double getArea()
     {
         double area = Math.pow(getSideLength(), 2);
-        return roundDouble(area, 2);
+        return roundDouble(area, DECIMAL_PLACES_OF_ACCURACY);
     }
 }

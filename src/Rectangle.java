@@ -18,11 +18,13 @@ public class Rectangle extends Polygon
 
     public double getPerimeter()
     {
-        return 2 * ( getWidth() + getHeight() );
+        double perimeter = 2 * ( getWidth() + getHeight() );
+        return roundDouble(perimeter, DECIMAL_PLACES_OF_ACCURACY);
     }
 
     public double getArea()
     {
-        return getWidth() * getHeight();
+        double area = getWidth() * getHeight();
+        return roundDouble(area, DECIMAL_PLACES_OF_ACCURACY);
     }
 }

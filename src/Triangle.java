@@ -17,14 +17,16 @@ public class Triangle extends Polygon
     //Calculate and return perimeter of triangle
     public double getPerimeter()
     {
-        return getSide(1) + getSide(2) + getSide(3);
+        double perimeter =  getSide(1) + getSide(2) + getSide(3);
+        return roundDouble(perimeter, DECIMAL_PLACES_OF_ACCURACY);
     }
 
     //Calculate and return area of triangle using Heron's Formula
     public double getArea()
     {
         double semiPeri = (getSide(1) + getSide(2) + getSide(3)) / 2;
-        return Math.pow(semiPeri * (semiPeri - getSide(1)) * (semiPeri - getSide(2)) * (semiPeri - getSide(3)), 0.5);
+        double area = Math.pow(semiPeri * (semiPeri - getSide(1)) * (semiPeri - getSide(2)) * (semiPeri - getSide(3)), 0.5);
+        return roundDouble(area, DECIMAL_PLACES_OF_ACCURACY);
 
     }
 }      

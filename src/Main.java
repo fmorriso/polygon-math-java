@@ -81,8 +81,8 @@ public class Main
         Hexagon hex = new Hexagon(lth);
         polygon = hex;
 
-        System.out.format("The Perimeter of a hexagon of length %.1f cm is %.1f cm %n", hex.getSideLength(), polygon.getPerimeter());
-        System.out.format("The Area of a hexagon of length %.1f cm is %.1f cm %n", hex.getSideLength(), polygon.getArea());
+        System.out.format("The Perimeter of a hexagon of length %.1f cm is %.2f cm %n", hex.getSideLength(), polygon.getPerimeter());
+        System.out.format("The Area of a hexagon of length %.1f cm is %.2f cm %n", hex.getSideLength(), polygon.getArea());
 
     }
 
@@ -99,8 +99,8 @@ public class Main
         Circle circ = new Circle(diameter);
         polygon = circ;
 
-        System.out.format("The Perimeter of a circle of diameter %.1f cm is %.1f cm %n", circ.getDiameter(), polygon.getPerimeter());
-        System.out.format("The Area of a circle of diameter %.1f cm is %.1f cm %n", circ.getDiameter(), polygon.getArea());
+        System.out.format("The Perimeter of a circle of diameter %.1f cm is %.2f cm %n", circ.getDiameter(), polygon.getPerimeter());
+        System.out.format("The Area of a circle of diameter %.1f cm is %.2f cm %n", circ.getDiameter(), polygon.getArea());
 
     }
 
@@ -119,7 +119,6 @@ public class Main
 
         // polygon points to the object sqr
         polygon = sqr;
-
 
         //Display the perimeter of square
         System.out.println("Perimeter of square: " + polygon.getPerimeter() + " cm");
@@ -150,13 +149,11 @@ public class Main
         // polygon points to the object tri
         polygon = tri;
 
-
-
         //Display the perimeter of triangle
-        System.out.format("Perimeter of triangle: %.1f cm%n", polygon.getPerimeter());
+        System.out.format("Perimeter of triangle: %.2f cm %n", polygon.getPerimeter());
 
         //Display the area of triangle
-        System.out.format("Area of triangle : %.1f%n", polygon.getArea());
+        System.out.format("Area of triangle : %.2f cm %n", polygon.getArea());
     }
 
     private static void TestRectangle()
@@ -175,7 +172,7 @@ public class Main
         Rectangle rect = new Rectangle(width, height);
         polygon = rect;
 
-        System.out.format("The Perimeter of a rectangle (%.1f cm W x %.1f cm H) is %.1f cm %n", rect.getWidth(), rect.getHeight(), polygon.getPerimeter());
-        System.out.format("The Area of a rectangle (%.1f cm W x %.1f cm H) is %.1f cm %n", rect.getWidth(), rect.getHeight(), polygon.getArea());
+        System.out.format("The Perimeter of a rectangle (%.1f cm W x %.1f cm H) is %.2f cm %n", rect.getWidth(), rect.getHeight(), polygon.getPerimeter());
+        System.out.format("The Area of a rectangle (%.1f cm W x %.1f cm H) is %.2f cm %n", rect.getWidth(), rect.getHeight(), polygon.getArea());
     }
 }
