@@ -63,7 +63,7 @@ public class Main
         System.out.print("Do you want to test another shape?>");
         String resp = kb.nextLine();
         // treat empty string/Enter key same as yes
-        if (resp == null || resp.length() == 0 || resp.toLowerCase().substring(0, 1).equals("y")) return true;
+        if (resp == null || resp.isEmpty() || resp.toLowerCase().substring(0, 1).equals("y")) return true;
         return false;
 
     }
