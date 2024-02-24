@@ -9,9 +9,9 @@ public class Triangle extends Polygon
 {
     public Triangle(double side1, double side2, double side3)
     {
+        setSide(3, side3);
         setSide(1, side1);
         setSide(2, side2);
-        setSide(3, side3);
     }
 
     //Calculate and return perimeter of triangle

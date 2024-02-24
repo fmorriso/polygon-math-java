@@ -33,11 +33,13 @@ public abstract class Polygon
      */
     public void setSide(int n, double val)
     {
-        // dynamically expand the ArrayList if necessary to store the specified value
+        // Dynamically expand the ArrayList if necessary to store the specified value
+        // at the specified index.
         if (sides.size() < n)
-            sides.add(val);
-        else
-            sides.set(n - 1, val);
+            for (int i = sides.size(); i < n; i++)
+                sides.add(Double.NaN);
+
+        sides.set(n - 1, val);
     }
 
     public double getArea()
