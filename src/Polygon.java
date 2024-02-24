@@ -33,6 +33,7 @@ public abstract class Polygon
      */
     public void setSide(int n, double val)
     {
+        // dynamically expand the ArrayList if necessary to store the specified value
         if (sides.size() < n)
             sides.add(val);
         else
