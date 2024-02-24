@@ -2,6 +2,7 @@ public class Rectangle extends Polygon
 {
     public Rectangle(double width, double height)
     {
+        // trett side 1 as width, side 2 as height
         setSide(1, width);
         setSide(2, height);
     }
