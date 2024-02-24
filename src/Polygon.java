@@ -13,16 +13,23 @@ public abstract class Polygon
 
     private ArrayList<Double> sides = new ArrayList<Double>();
 
-    public double getSide(int i)
+    /**
+     * returns the value of the specified side number
+     *
+     * @param n the side number
+     * @implNote Since sides are numbered 1, 2, 3, we adjust the index value to correspond to the 0, 1, 2
+     * numbering of ArrayList.
+     */
+    public double getSide(int n)
     {
-        return sides.get(i - 1);
+        return sides.get(n - 1);
     }
 
     /**
-     * @param m the side number
+     * @param n   the side number
      * @param val the value of the side
-     * @implNote  Since sides are numbered 1, 2, 3, we adjust the index value to correspond to the 0, 1, 2
-     *            numbering of ArrayList
+     * @implNote Since sides are numbered 1, 2, 3, we adjust the index value to correspond to the 0, 1, 2
+     * numbering of ArrayList
      */
     public void setSide(int n, double val)
     {
