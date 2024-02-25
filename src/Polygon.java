@@ -8,6 +8,8 @@ import java.math.RoundingMode;
 
 public abstract class Polygon
 {
+    public static final int DECIMAL_PLACES_OF_ACCURACY = 2;
+
     private double side1;
     private double side2;
     private double side3;
