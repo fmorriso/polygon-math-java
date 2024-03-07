@@ -8,7 +8,7 @@ public class Main
 {
     public static void main(String[] args)
     {
-        System.out.println("Welcome to Polygon Math");
+        System.out.format("Welcome to Polygon Math using Java %s%n", getJavaVersion());
 
         do
         {
@@ -163,9 +163,8 @@ public class Main
 
     private static void TestRectangle()
     {
-
         System.out.println("Rectangle");
-
+        
         Polygon polygon = null;
         Scanner input1 = new Scanner(System.in);
 
@@ -179,5 +178,11 @@ public class Main
 
         System.out.format("The Perimeter of a rectangle (%.1f cm W x %.1f cm H) is %.2f cm %n", rect.getWidth(), rect.getHeight(), polygon.getPerimeter());
         System.out.format("The Area of a rectangle (%.1f cm W x %.1f cm H) is %.2f cm %n", rect.getWidth(), rect.getHeight(), polygon.getArea());
+    }
+
+    private static String getJavaVersion()
+    {
+        Runtime.Version runTimeVersion = Runtime.version();
+        return String.format("%s.%s.%s.%s", runTimeVersion.feature(), runTimeVersion.interim(), runTimeVersion.update(), runTimeVersion.patch());
     }
 }

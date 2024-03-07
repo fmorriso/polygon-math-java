@@ -4,3 +4,5 @@ A simple lesson in polymorphism using Java that requires the student to come up 
 * Java 1.8 or higher
 * Visual Studio Code 1.86.2
 * IntelliJ Community Edition 2023.3.4
+## Change Log
+* 2024-03-06 added display of Java run-time version being used.
